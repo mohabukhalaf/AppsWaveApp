@@ -1,0 +1,3 @@
+INSERT INTO mydb.news (created_at,delete_action,deleted_at,description,description_ar,image_url,publish_date,status,title,title_ar,updated_at) VALUES
+	 ('2025-09-30 17:18:45.337559',0,'2025-09-30 17:28:08.489658','This is a test description from admin','هذا وصف تجريبي','http://example.com/image12.jpg','2025-09-30 17:18:45.318779','DELETED','Breaking News from admin1','أخبار عاجلة','2025-09-30 17:34:02.785378'),
+	 ('2025-09-30 17:30:06.891869',0,'2025-09-30 17:54:40.689126','This is a test description from admin','هذا وصف تجريبي','http://example.com/image12.jpg','2025-09-30 17:30:06.891120','DELETED','Breaking News from admin','أخبار عاجلة','2025-09-30 17:54:40.758628');
