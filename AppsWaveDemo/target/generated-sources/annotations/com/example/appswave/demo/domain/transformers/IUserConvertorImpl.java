@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-09-30T21:40:19+0300",
-    comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 1.4.300.v20221108-0856, environment: Java 17.0.5 (Eclipse Adoptium)"
+    date = "2025-10-01T00:23:55+0300",
+    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 11.0.15 (Oracle Corporation)"
 )
 @Component
 public class IUserConvertorImpl implements IUserConvertor {
@@ -23,11 +23,11 @@ public class IUserConvertorImpl implements IUserConvertor {
 
         UserTO userTO = new UserTO();
 
-        userTO.setDateOfBirth( e.getDateOfBirth() );
-        userTO.setEmail( e.getEmail() );
-        userTO.setFullName( e.getFullName() );
         userTO.setId( e.getId() );
+        userTO.setFullName( e.getFullName() );
+        userTO.setEmail( e.getEmail() );
         userTO.setPassword( e.getPassword() );
+        userTO.setDateOfBirth( e.getDateOfBirth() );
         userTO.setRole( e.getRole() );
 
         return userTO;
@@ -55,11 +55,11 @@ public class IUserConvertorImpl implements IUserConvertor {
 
         User.UserBuilder user = User.builder();
 
-        user.dateOfBirth( t.getDateOfBirth() );
-        user.email( t.getEmail() );
-        user.fullName( t.getFullName() );
         user.id( t.getId() );
+        user.fullName( t.getFullName() );
+        user.email( t.getEmail() );
         user.password( t.getPassword() );
+        user.dateOfBirth( t.getDateOfBirth() );
         user.role( t.getRole() );
 
         return user.build();

@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-09-30T21:40:19+0300",
-    comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 1.4.300.v20221108-0856, environment: Java 17.0.5 (Eclipse Adoptium)"
+    date = "2025-10-01T00:23:55+0300",
+    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 11.0.15 (Oracle Corporation)"
 )
 @Component
 public class INewsConvertorImpl implements INewsConvertor {
@@ -23,16 +23,16 @@ public class INewsConvertorImpl implements INewsConvertor {
 
         NewsTO newsTO = new NewsTO();
 
-        newsTO.setDeleteAction( e.isDeleteAction() );
-        newsTO.setDeletedAt( e.getDeletedAt() );
-        newsTO.setDescription( e.getDescription() );
-        newsTO.setDescriptionAr( e.getDescriptionAr() );
         newsTO.setId( e.getId() );
-        newsTO.setImageUrl( e.getImageUrl() );
-        newsTO.setPublishDate( e.getPublishDate() );
-        newsTO.setStatus( e.getStatus() );
         newsTO.setTitle( e.getTitle() );
         newsTO.setTitleAr( e.getTitleAr() );
+        newsTO.setDescription( e.getDescription() );
+        newsTO.setDescriptionAr( e.getDescriptionAr() );
+        newsTO.setPublishDate( e.getPublishDate() );
+        newsTO.setImageUrl( e.getImageUrl() );
+        newsTO.setStatus( e.getStatus() );
+        newsTO.setDeletedAt( e.getDeletedAt() );
+        newsTO.setDeleteAction( e.isDeleteAction() );
 
         return newsTO;
     }
@@ -59,16 +59,16 @@ public class INewsConvertorImpl implements INewsConvertor {
 
         News.NewsBuilder news = News.builder();
 
-        news.deleteAction( t.isDeleteAction() );
-        news.deletedAt( t.getDeletedAt() );
-        news.description( t.getDescription() );
-        news.descriptionAr( t.getDescriptionAr() );
         news.id( t.getId() );
-        news.imageUrl( t.getImageUrl() );
-        news.publishDate( t.getPublishDate() );
-        news.status( t.getStatus() );
         news.title( t.getTitle() );
         news.titleAr( t.getTitleAr() );
+        news.description( t.getDescription() );
+        news.descriptionAr( t.getDescriptionAr() );
+        news.publishDate( t.getPublishDate() );
+        news.imageUrl( t.getImageUrl() );
+        news.status( t.getStatus() );
+        news.deleteAction( t.isDeleteAction() );
+        news.deletedAt( t.getDeletedAt() );
 
         return news.build();
     }
